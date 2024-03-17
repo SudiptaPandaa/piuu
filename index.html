@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Pyarr</title>
+    <style>
+        body {
+            background-repeat: no-repeat;
+           /* background-size: 100% 100%;*/
+            background-attachment: fixed;
+            background-image: url("bg.png");
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            text-align: center;
+            position: absolute;
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
+        }
+        #image {
+            display: block;
+            margin: 0 auto; 
+            width: 400px; 
+        }
+        #text {
+            text-align: center;
+            
+            margin-top: 10px;
+            font-size: 18px;
+            color: #ffffff; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <script>
+        var images = ["10.gif", "2.gif", "3.gif", "4.gif","1.gif","6.gif","7.gif","8.gif","9.gif","5.gif"];
+        var texts = ["Piuuuuu","I Love You💗", "Stop being mean to meeee","You are myy bestpiubaebiphirendd naaa", "🪬","Ye lo phool for my phool 🪻","Puiii nahi hunn mee tumahraii??","🌚","Chechiddeebbiii sabubele mo saha emiti byabahara kaleee🐿","Okay byee"];
+        var currentIndex = 0;
+
+        function changeImage() {
+            document.getElementById("image").src = images[currentIndex];
+            document.getElementById("text").innerText = texts[currentIndex];
+            currentIndex = (currentIndex + 1) % images.length;
+            setTimeout(changeImage, 2000); 
+        }
+
+        window.onload = function () {
+            changeImage(); 
+        };
+    </script>
+</head>
+<body background="bg.png">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <img id="image" src="5.gif" width="55%" />
+    <p id="text">Text 1</p>
+</body>
+</html>
+</html>
